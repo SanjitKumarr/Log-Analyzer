@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./queryP.css')}}"
+    />
+    <title>Analyzer</title>
+  </head>
+  <body>
+    <div id="head">
+      <p>Log Analyser</p>
+    </div>
+    <div id="fm">
+      <form action="/output" method="POST" class="fm1" id="f2">
+        <h1>Upload your details</h1>
+        <br />
+        <input
+          class="at"
+          type="text"
+          name="IPAddress"
+          placeholder="IP Address"
+        />
+        <input
+          class="at"
+          type="text"
+          name="UserAgent"
+          placeholder="User-Agent"
+        />
+        <input
+          class="at"
+          type="number"
+          name="StatusCode"
+          placeholder="Status-Code"
+        />
+        <input
+          class="at"
+          list="req"
+          name="RequestType"
+          placeholder="Request-Type"
+        />
+        <datalist id="req">
+          <option value="GET"></option>
+          <option value="POST"></option>
+          <option value="PUT"></option>
+          <option value="HEAD"></option>
+          <option value="DELETE"></option>
+          <option value="PATCH"></option>
+          <option value="OPTIONS"></option>
+        </datalist>
+        <input class="at" type="text" name="API" placeholder="API" />
+        <input class="at" type="text" name="UserName" placeholder="Username" />
+        <input
+          class="at"
+          type="text"
+          name="EnterpriseID"
+          placeholder="Enterprise ID"
+        />
+        <input
+          class="at"
+          type="text"
+          name="EnterpriseName"
+          placeholder="Enterprise Name"
+        />
+        <input class="at sub" type="submit" name="submit2" />
+      </form>
+    </div>
+  </body>
+</html>
